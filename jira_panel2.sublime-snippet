@@ -1,0 +1,32 @@
+<!--
+====================
+Jira Panel1 function
+====================
+This can be used to add {panel} block around the selected text.
+
+Usage:
+   Trigger the snippet via Tools > Snippets..., via keybinding or tab complete
+
+Example keybinding:
+   {
+      "keys": ["alt+p],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_panel2.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   hello panel2
+would be changed to:
+   {panel:title=TODO|borderStyle=dashed|borderColor=#ccc|titleBGColor=#F7D6C1|bgColor=#FFFFCE}
+   hello panel2
+   {panel}
+-->
+<snippet>
+	<content><![CDATA[{panel:title=TODO|borderStyle=dashed|borderColor=#ccc|titleBGColor=#F7D6C1|bgColor=#FFFFCE}
+$SELECTION
+{panel}]]></content>
+	<tabTrigger>panel2</tabTrigger>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Panel 2 (adds {panel} block)</description>
+</snippet>

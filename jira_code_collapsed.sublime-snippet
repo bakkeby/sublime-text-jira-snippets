@@ -1,0 +1,33 @@
+<!--
+============================
+Jira Code Collapsed function
+============================
+This can be used to add a collapsed {code} block around the selected text. Copy and tailor this
+snippet if you primarily add code snippets for specific programming languages.
+
+Usage:
+   Trigger the snippet via Tools > Snippets..., via keybinding or tab complete
+
+Example keybinding:
+   {
+      "keys": ["alt+c],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_code_collapsed.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   hello code
+would be changed to:
+   {code:|collapse|title=}
+   hello code
+   {code}
+-->
+<snippet>
+	<content><![CDATA[{code:|collapse|title=}
+$SELECTION
+{code}]]></content>
+	<tabTrigger>code</tabTrigger>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Code Collapsed (adds collapsed {code} block)</description>
+</snippet>

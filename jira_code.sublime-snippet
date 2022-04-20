@@ -1,0 +1,33 @@
+<!--
+==================
+Jira Code function
+==================
+This can be used to add a {code} block around the selected text. Copy and tailor this snippet if
+you primarily add code snippets for specific programming languages.
+
+Usage:
+   Trigger the snippet via Tools > Snippets..., via keybinding or tab complete
+
+Example keybinding:
+   {
+      "keys": ["alt+c],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_code.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   hello code
+would be changed to:
+   {code:|title=}
+   hello code
+   {code}
+-->
+<snippet>
+	<content><![CDATA[{code:|title=}
+$SELECTION
+{code}]]></content>
+	<tabTrigger>code</tabTrigger>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Code (adds {code} block)</description>
+</snippet>

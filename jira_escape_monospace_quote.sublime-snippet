@@ -1,0 +1,56 @@
+<!--
+====================================
+Jira Escape Monospace quote function
+====================================
+This can be used to escape characters that would otherwise be interpreted by Jira for formatting
+purposes. One use case would be to include a single log line that would be too long to be displayed
+efficiently within a {noformat} block. This variant is the same as the Jira Escape function except
+that it also wraps each line with {{ and }} making it monospaced and wraps the entire selected text
+in a {quote} block.
+
+Usage:
+   select text, then trigger the snippet via Tools > Snippets... or via keybinding
+
+Example keybinding:
+   {
+      "keys": ["alt+n"],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_escape_monospace_quote.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   [123] Error: ***Invalid syntax {use of _underscore_ } not allowed***
+would be changed to:
+   {quote}
+   {{\[123\] Error: \*\*\*Invalid syntax \{use of \_underscore\_ \} not allowed\*\*\*}}
+   {quote}
+
+How does it work?
+The snippet uses the substitution syntax that allows for changes to be made via regular
+expressions. More so it uses a Boost library regular expression and the format string uses
+a Boost library format string.
+
+What subsitutions will take place?
+   & will be changed to &amp;
+   \ will be changed to &#92;
+   [ ] | { } ( ) - ? ~ ! ^ and * will be escaped e.g. * becomes \*
+   tab becomes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (8 spaces)
+   double spaces becomes &nbsp;&nbsp;
+   a hash # character will be escaped unless it is preceeded by & (avoding &amp; etc.)
+
+References:
+https://stackoverflow.com/questions/50121434/sublime-text-snippets-substitutions-with-3-regex-replacements
+https://sublime-text-unofficial-documentation.readthedocs.io/en/sublime-text-2/extensibility/snippets.html#substitutions
+https://www.boost.org/doc/libs/1_56_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
+https://www.boost.org/doc/libs/1_56_0/libs/regex/doc/html/boost_regex/format/boost_format_syntax.html
+-->
+<snippet>
+	<content><![CDATA[
+{quote}
+${SELECTION/(?:(^))|(?:($))|(?:(\n))|(?:(&))|(?:(\\))|(?:([\[\]\|\{\}\(\)\-\+_\?~!^\*]))|(?:(\t))|(?:(  ))|(?:(^|[^&])#)/(?1{{)(?2}})(?3}}$3{{)(?4&amp;)(?5&#92;)(?6\\$6)(?7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)(?8&nbsp;&nbsp;)(?9$9\\#)/g}
+{quote}
+]]></content>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Escape Monocle Quote (escapes Jira interpreted characters)</description>
+</snippet>

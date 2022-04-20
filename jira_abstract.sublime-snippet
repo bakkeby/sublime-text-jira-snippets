@@ -1,0 +1,42 @@
+<!--
+======================
+Jira Abstract function
+======================
+This can be used to add the abstract template for overviews.
+
+Usage:
+   Trigger the snippet via Tools > Snippets..., via keybinding or tab complete
+
+Example keybinding:
+   {
+      "keys": ["alt+a],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_abstract.sublime-snippet" }
+   },
+
+Expected results:
+The following text will be added:
+   h4. Abstract
+      -
+      -
+      -
+
+   <horizontal ruler>
+-->
+<snippet>
+	<content><![CDATA[
+h4. Abstract
+   - 
+   - 
+   - 
+
+\\\\
+----
+
+\\\\
+$SELECTION
+]]></content>
+	<tabTrigger>abstract</tabTrigger>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Abstract (adds abstract template)</description>
+</snippet>

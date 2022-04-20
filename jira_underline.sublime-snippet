@@ -1,0 +1,33 @@
+<!--
+=======================
+Jira Underline function
+=======================
+This can be used to add {+} characters around the selected text which makes text underlined
+(inserted) in Jira.
+
+Usage:
+   select text, then trigger the snippet via Tools > Snippets... or via keybinding
+
+Example keybinding:
+   {
+      "keys": ["alt+u"],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_underline.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   hello underline
+would be changed to:
+   {+}hello underline{+}
+
+If the selected text contains leading or trailing spaces then those will be omitted.
+If the selected text is multi-line then {+} will be added at the start and end of each line.
+-->
+<snippet>
+	<content><![CDATA[
+${SELECTION/(?:(^\s*))|(?:(\s*$))|(?:(\s*\n\s*))|(?:([^\n]*[^\n ]+))/(?1$1)(?2$2)(?3$3)(?4{+}$4{+})/g}
+]]></content>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Underline (adds {+} formatting)</description>
+</snippet>

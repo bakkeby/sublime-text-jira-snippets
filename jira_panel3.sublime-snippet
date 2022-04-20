@@ -1,0 +1,32 @@
+<!--
+====================
+Jira Panel3 function
+====================
+This can be used to add dotted {panel} block around the selected text.
+
+Usage:
+   Trigger the snippet via Tools > Snippets..., via keybinding or tab complete
+
+Example keybinding:
+   {
+      "keys": ["alt+p],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_panel3.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   hello panel3
+would be changed to:
+   {panel:title=|borderStyle=dashed|borderColor=#000000|bgColor=#FFFFFF}
+   {_}hello panel3{_}
+   {panel}
+-->
+<snippet>
+	<content><![CDATA[{panel:title=|borderStyle=dashed|borderColor=#000000|bgColor=#FFFFFF}
+${SELECTION/(?:(^\s*))|(?:(\s*$))|(?:(\s*\n\s*))|(?:([^\n]*[^\n ]+))/(?1$1)(?2$2)(?3$3)(?4{_}$4{_})/g}
+{panel}]]></content>
+	<tabTrigger>panel3</tabTrigger>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Panel 3 (adds dotted {panel} block)</description>
+</snippet>

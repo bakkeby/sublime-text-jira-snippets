@@ -1,0 +1,32 @@
+<!--
+===================
+Jira Quote function
+===================
+This can be used to add {quote} block around the selected text.
+
+Usage:
+   Trigger the snippet via Tools > Snippets..., via keybinding or tab complete
+
+Example keybinding:
+   {
+      "keys": ["alt+q"],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_quote.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   hello quote
+would be changed to:
+   {quote}
+   hello quote
+   {quote}
+-->
+<snippet>
+	<content><![CDATA[{quote}
+$SELECTION
+{quote}]]></content>
+	<tabTrigger>quote</tabTrigger>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Quote (adds {quote} block)</description>
+</snippet>

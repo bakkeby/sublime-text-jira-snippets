@@ -1,0 +1,29 @@
+<!--
+=======================
+Jira Highlight function
+=======================
+This can be used to add a {color} block around the selected text. Copy and tailor this snippet if
+you highlight using different colors.
+
+Usage:
+   select text, then trigger the snippet via Tools > Snippets... or via keybinding
+
+Example keybinding:
+   {
+      "keys": ["alt+h],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_highlight.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   hello color
+would be changed to:
+   {color:#900000}hello color{color}
+-->
+<snippet>
+	<content><![CDATA[{color:#900000}$SELECTION{color}]]></content>
+   <tabTrigger>color</tabTrigger>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Highlight (adds {color} block)</description>
+</snippet>

@@ -1,0 +1,33 @@
+<!--
+====================
+Jira Italic function
+====================
+This can be used to add {_} characters around the selected text which makes text italic (emphasis)
+in Jira.
+
+Usage:
+   select text, then trigger the snippet via Tools > Snippets... or via keybinding
+
+Example keybinding:
+   {
+      "keys": ["alt+i"],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_italic.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   hello italic
+would be changed to:
+   {_}hello italic{_}
+
+If the selected text contains leading or trailing spaces then those will be omitted.
+If the selected text is multi-line then {_} will be added at the start and end of each line.
+-->
+<snippet>
+	<content><![CDATA[
+${SELECTION/(?:(^\s*))|(?:(\s*$))|(?:(\s*\n\s*))|(?:([^\n]*[^\n ]+))/(?1$1)(?2$2)(?3$3)(?4{_}$4{_})/g}
+]]></content>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira Italic (adds {_} formatting)</description>
+</snippet>

@@ -1,0 +1,32 @@
+<!--
+================================
+Jira Noformat Collapsed function
+================================
+This can be used to add {noformat} block around the selected text.
+
+Usage:
+   Trigger the snippet via Tools > Snippets..., via keybinding or tab complete
+
+Example keybinding:
+   {
+      "keys": ["alt+n],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_noformat_collapsed.sublime-snippet" }
+   },
+
+Expected results:
+As an example the following string
+   hello noformat
+would be changed to:
+   {noformat:collapse}
+   hello noformat
+   {noformat}
+-->
+<snippet>
+	<content><![CDATA[{noformat:collapse}
+$SELECTION
+{noformat}]]></content>
+	<tabTrigger>noformat</tabTrigger>
+	<!-- <scope>source.jira</scope> -->
+	<description>Jira noformat collapsed (adds {noformat:collapse} block)</description>
+</snippet>
