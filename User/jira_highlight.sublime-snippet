@@ -22,7 +22,7 @@ would be changed to:
    {color:#900000}hello color{color}
 -->
 <snippet>
-	<content><![CDATA[{color:#900000}$SELECTION{color}]]></content>
+	<content><![CDATA[{color:#900000}$SELECTION$0{color}]]></content>
    <tabTrigger>color</tabTrigger>
 	<scope>source.jira</scope>
 	<description>Jira Highlight (adds {color} block)</description>

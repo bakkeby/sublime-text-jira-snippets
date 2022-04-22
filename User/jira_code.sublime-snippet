@@ -24,8 +24,8 @@ would be changed to:
    {code}
 -->
 <snippet>
-	<content><![CDATA[{code:|title=}
-$SELECTION
+	<content><![CDATA[{code:${1:tcl}|title=${2:}}
+$SELECTION$0
 {code}]]></content>
 	<tabTrigger>code</tabTrigger>
 	<scope>source.jira</scope>

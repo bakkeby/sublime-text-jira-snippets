@@ -24,7 +24,7 @@ would be changed to:
 -->
 <snippet>
 	<content><![CDATA[{quote}
-$SELECTION
+$SELECTION$0
 {quote}]]></content>
 	<tabTrigger>quote</tabTrigger>
 	<scope>source.jira</scope>

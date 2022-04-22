@@ -23,8 +23,8 @@ would be changed to:
    {noformat}
 -->
 <snippet>
-	<content><![CDATA[{noformat:collapse}
-$SELECTION
+	<content><![CDATA[{noformat${1::collapse}}
+$SELECTION$0
 {noformat}]]></content>
 	<tabTrigger>noformat</tabTrigger>
 	<scope>source.jira</scope>

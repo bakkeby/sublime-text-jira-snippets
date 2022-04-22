@@ -23,8 +23,8 @@ would be changed to:
    {panel}
 -->
 <snippet>
-	<content><![CDATA[{panel:title=|borderStyle=dashed|borderColor=#000000|bgColor=#FFFFFF}
-${SELECTION/(?:(^\s*))|(?:(\s*$))|(?:(\s*\n\s*))|(?:([^\n]*[^\n ]+))/(?1$1)(?2$2)(?3$3)(?4{_}$4{_})/g}
+	<content><![CDATA[{panel:title=${1:}|borderStyle=${2:dashed}|borderColor=#${3:000000}|bgColor=#${4:FFFFFF}}
+${SELECTION/(?:(^\s*))|(?:(\s*$))|(?:(\s*\n\s*))|(?:([^\n]*[^\n ]+))/(?1$1)(?2$2)(?3$3)(?4{_}$4{_})/g}$0
 {panel}]]></content>
 	<tabTrigger>panel3</tabTrigger>
 	<scope>source.jira</scope>

@@ -24,7 +24,7 @@ would be changed to:
 -->
 <snippet>
 	<content><![CDATA[{noformat}
-$SELECTION
+$SELECTION$0
 {noformat}]]></content>
 	<tabTrigger>noformat</tabTrigger>
 	<scope>source.jira</scope>

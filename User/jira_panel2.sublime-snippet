@@ -23,8 +23,8 @@ would be changed to:
    {panel}
 -->
 <snippet>
-	<content><![CDATA[{panel:title=TODO|borderStyle=dashed|borderColor=#ccc|titleBGColor=#F7D6C1|bgColor=#FFFFCE}
-$SELECTION
+	<content><![CDATA[{panel:title=${1:TODO}|borderStyle=${2:dashed}|borderColor=#${3:ccc}|titleBGColor=#${4:F7D6C1}|bgColor=#${5:FFFFCE}}
+$SELECTION$0
 {panel}]]></content>
 	<tabTrigger>panel2</tabTrigger>
 	<scope>source.jira</scope>

@@ -26,3 +26,79 @@ The colours and what is being highlighted depends on the colour scheme used in s
 
 Example:
 ![sample.jpg](sample.jpg)
+
+
+Example keybindings:
+
+```json
+	{
+		"keys": ["alt+m"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_escape.sublime-snippet" }
+	},
+	{
+		"keys": ["alt+n"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_escape_monospace_quote.sublime-snippet" }
+	},
+	{
+		"keys": ["alt+o"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_panel1.sublime-snippet" }
+	},
+	{
+		"keys": ["alt+p"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_panel2.sublime-snippet" }
+	},
+	{
+		"keys": ["alt+q"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_panel3.sublime-snippet" }
+	},
+	{
+		"keys": ["alt+w"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_code.sublime-snippet" }
+	},
+	{
+		"keys": ["ctrl+b"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_bold.sublime-snippet" }
+	},
+	{
+		"keys": ["ctrl+i"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_italic.sublime-snippet" }
+	},
+	{
+		"keys": ["ctrl+u"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_underline.sublime-snippet" }
+	},
+	{
+		"keys": ["ctrl+shift+s"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_strikethrough.sublime-snippet" }
+	},
+	{
+		"keys": ["ctrl+h"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_highlight.sublime-snippet" }
+	},
+	{
+		"keys": ["ctrl+m"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_monospaced.sublime-snippet" }
+	},
+	{
+		"keys": ["ctrl+q"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_quote.sublime-snippet" }
+	},
+	{
+		"keys": ["ctrl+l"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_noformat.sublime-snippet" }
+	},
+```
