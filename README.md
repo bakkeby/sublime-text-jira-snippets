@@ -82,7 +82,7 @@ Example keybindings:
 		"args": { "name": "Packages/User/jira_strikethrough.sublime-snippet" }
 	},
 	{
-		"keys": ["ctrl+h"],
+		"keys": ["alt+h"],
 		"command": "insert_snippet",
 		"args": { "name": "Packages/User/jira_highlight.sublime-snippet" }
 	},
