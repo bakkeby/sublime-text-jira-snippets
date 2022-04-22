@@ -37,6 +37,6 @@ h4. Abstract
 $SELECTION
 ]]></content>
 	<tabTrigger>abstract</tabTrigger>
-	<!-- <scope>source.jira</scope> -->
+	<scope>source.jira</scope>
 	<description>Jira Abstract (adds abstract template)</description>
 </snippet>

@@ -27,6 +27,6 @@ would be changed to:
 ${SELECTION/(?:(^\s*))|(?:(\s*$))|(?:(\s*\n\s*))|(?:([^\n]*[^\n ]+))/(?1$1)(?2$2)(?3$3)(?4{_}$4{_})/g}
 {panel}]]></content>
 	<tabTrigger>panel3</tabTrigger>
-	<!-- <scope>source.jira</scope> -->
+	<scope>source.jira</scope>
 	<description>Jira Panel 3 (adds dotted {panel} block)</description>
 </snippet>

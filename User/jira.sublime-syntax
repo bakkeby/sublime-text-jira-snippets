@@ -1,0 +1,275 @@
+%YAML 1.2
+---
+# See https://www.sublimetext.com/docs/syntax.html
+#     https://www.sublimetext.com/docs/scope_naming.html
+name: Jira
+file_extensions:
+  - jira
+scope: source.jira
+
+contexts:
+  # The prototype context is prepended to all contexts but those setting
+  # meta_include_prototype: false.
+  prototype:
+    - include: comments
+
+  main:
+    # The main context is the initial starting point of our syntax.
+    # Include other contexts from here (or specify them directly).
+    - include: keywords
+    - include: numbers
+    - include: strings
+    - include: bold
+    - include: italic
+    - include: underline
+    - include: ruler
+    - include: strikethrough
+    - include: subscript
+    - include: superscript
+    - include: monospaced
+    - include: color
+    - include: links
+    - include: quote
+    - include: noformat
+    - include: panel
+    - include: code
+    - include: headers
+    - include: bullets
+    - include: table
+
+  keywords:
+    # Keywords are if, else for and while.
+    # Note that blackslashes don't need to be escaped within single quoted
+    # strings in YAML. When using single quoted strings, only single quotes
+    # need to be escaped: this is done by using two single quotes next to each
+    # other.
+    - match: '\b(if|else|for|while)\b'
+      scope: keyword.control.jira
+
+  numbers:
+    - match: '\b(-)?[0-9.]+\b'
+      scope: constant.numeric.jira
+
+  strings:
+    # Strings begin and end with quotes, and use backslashes as an escape
+    # character.
+    - match: '"'
+      scope: punctuation.definition.string.begin.jira
+      push: inside_string
+
+  inside_string:
+    - meta_include_prototype: false
+    - meta_scope: string.quoted.double.jira
+    - match: '\.'
+      scope: constant.character.escape.jira
+    - match: '"'
+      scope: punctuation.definition.string.end.jira
+      pop: true
+
+  bold:
+    - match: '\{\*\}.*?\{\*\}|(?<!\\)\*[^*]+\*'
+      scope: markup.bold
+      pop: true
+
+  italic:
+    - match: '\{_\}.*?\{_\}|(?<!\\)_[^_]+_'
+      scope: markup.italic
+      pop: true
+
+  underline:
+    - match: '\{\+\}.*?\{\+\}|(?<!\\)\+[^\+]+?\+'
+      scope: markup.underline
+      pop: true
+
+  strikethrough:
+    - match: '\{\-\}.*?\{\-\}|(?<!\\)\-[^\-]+?\-'
+      scope: markup.deleted
+      pop: true
+
+  subscript:
+    - match: '\{\~\}.*?\{\~\}|(?<!\\)\~[^\~]+?\~'
+      scope: variable.language
+      pop: true
+
+  superscript:
+    - match: '\{\^\}.*?\{\^\}|(?<!\\)\^[^\^]+?\^'
+      scope: storage.type
+      pop: true
+
+  monospaced:
+    - match: '(?<!\\)\{\{[^\}]+\}\}'
+      scope: markup.raw.inline
+      pop: true
+
+  links:
+    - match: '(?<!\\)\[[^|]+\|[^\]]*[^\\]\]'
+      scope: markup.underline.link
+      pop: true
+
+  quote:
+    - match: '\{quote\}'
+      scope: markup.quote
+      push: inside_quote
+
+  inside_quote:
+    - meta_include_prototype: false
+    - meta_scope: markup.quote
+    - match: '\{quote\}'
+      pop: true
+
+  noformat:
+    - match: '(?<!\\)\{noformat[^\}]*?\}'
+      scope: markup.raw.block
+      push: inside_noformat
+
+  inside_noformat:
+    - meta_include_prototype: false
+    - meta_scope: markup.raw.block
+    - match: '(?<!\\)\{noformat\}\n?'
+      pop: true
+
+  code:
+    - match: '(?<!\\)\{code:tcl[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.tcl
+      embed_scope: source.tcl.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(py|python)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.python
+      embed_scope: source.python.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(js|javascript)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.js
+      embed_scope: source.js.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+      # push: inside_noformat_tcl
+    - match: '(?<!\\)\{code:java[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.java
+      embed_scope: source.java.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:c[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.c
+      embed_scope: source.c.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:xml[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:text.xml
+      embed_scope: text.xml.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:html?[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:text.html.basic
+      embed_scope: text.html.basic.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:php?[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.php
+      embed_scope: source.php.basic.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:diff[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.diff
+      embed_scope: source.diff.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:sql[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.sql
+      embed_scope: source.sql.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+
+  panel:
+    - match: '^(?<!\\)\{panel[^\}]*?\}'
+      scope: string
+      pop: true
+
+  color:
+    - match: '(?<!\\)\{color[^\}]*?\}.*?\{color\}'
+      scope: entity.name
+      pop: true
+
+  headers:
+    - match: '^h[1-6]\. '
+      scope: markup.heading
+      pop: true
+
+  bullets:
+    - match: '^\s+(\*|-) .+$'
+      scope: markup.list.unnumbered
+      pop: true
+    - match: '^\s+# .+$'
+      scope: markup.list.numbered
+      pop: true
+
+  ruler:
+    - match: '^----+\n?'
+      scope: markup.raw.inline
+      pop: true
+
+  table:
+    - match: '^\|.*\|'
+      scope: markup.other
+      pop: true
+
+  comments:
+    # Comments begin with a '//' and finish at the end of the line.
+    - match: '//'
+      scope: punctuation.definition.comment.jira
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_scope: comment.line.double-slash.jira
+        - match: $\n?
+          pop: true

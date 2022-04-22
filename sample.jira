@@ -1,0 +1,52 @@
+This is {*}bold text{*}, *this* too, but not \*this\*
+
+This is {_}italic text{_}, _this_ too, but not \_this\_
+
+This is {+}underline text{+}, +this+ too, but not \+this\+
+
+This is {{monospaced}} text
+
+This is {-}strikethrough{-} text
+
+This is {~}subscript{~} text
+
+This is {^}superscript{^} text
+
+h4. Bullets
+   - bullet1
+   - bullet2
+   - bullet3
+
+h4. Numbered
+   # numbered1
+   # numbered2
+   # numbered3
+
+Example {color:#900000}highlight{color}
+
+----
+
+{panel:title=Example panel|borderStyle=dashed|borderColor=#000000|bgColor=#FFFFFF}
+
+{noformat}
+Plain unformatted *text*
+{noformat}
+
+{code:c|title=Example code snippet}
+void
+detach(Client *c)
+{
+    Client **tc;
+    c->idx = 0;
+    for (tc = &c->ws->clients; *tc && *tc != c; tc = &(*tc)->next);
+    *tc = c->next;
+    c->next = NULL;
+}
+{code}
+
+{quote}
+“I’m not bald! I just have a really high widow's peak.”
+{??}Murray, the demonic talking skull{??}
+{quote}
+
+{panel}

@@ -27,6 +27,6 @@ would be changed to:
 $SELECTION
 {noformat}]]></content>
 	<tabTrigger>noformat</tabTrigger>
-	<!-- <scope>source.jira</scope> -->
+	<scope>source.jira</scope>
 	<description>Jira noformat (adds {noformat} block)</description>
 </snippet>

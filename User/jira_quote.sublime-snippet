@@ -27,6 +27,6 @@ would be changed to:
 $SELECTION
 {quote}]]></content>
 	<tabTrigger>quote</tabTrigger>
-	<!-- <scope>source.jira</scope> -->
+	<scope>source.jira</scope>
 	<description>Jira Quote (adds {quote} block)</description>
 </snippet>

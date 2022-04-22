@@ -17,7 +17,12 @@ In this scenario the snippet will ignore leading and trailing spaces in the sele
 formatting handler does not handle a \{\*\} followed by a space very well.
 
 Snippets are usually placed in the following directory:
-   - ~/.config/sublime-text-4/Packages/User/ (Linux)
+   - \~/.config/sublime-text/Packages/User/ (Linux)
 
-Optionally one can set up a dedicated jira source definition and limit the scope of these snippets
-to only apply to files that fall under the specific source.
+The [jira.sublime-syntax](https://github.com/bakkeby/sublime-text-jira-snippets/blob/master/User/jira.sublime-syntax)
+file provides syntax highlighting for .jira files.
+
+The colours and what is being highlighted depends on the colour scheme used in sublime text.
+
+Example:
+![sample.jpg](sample.jpg)

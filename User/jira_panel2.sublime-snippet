@@ -27,6 +27,6 @@ would be changed to:
 $SELECTION
 {panel}]]></content>
 	<tabTrigger>panel2</tabTrigger>
-	<!-- <scope>source.jira</scope> -->
+	<scope>source.jira</scope>
 	<description>Jira Panel 2 (adds {panel} block)</description>
 </snippet>

@@ -1,10 +1,12 @@
 <!--
-====================
-Jira Escape function
-====================
+====================================
+Jira Escape Monospace quote function
+====================================
 This can be used to escape characters that would otherwise be interpreted by Jira for formatting
 purposes. One use case would be to include a single log line that would be too long to be displayed
-efficiently within a {noformat} block.
+efficiently within a {noformat} block. This variant is the same as the Jira Escape function except
+that it also wraps each line with {{ and }} making it monospaced and wraps the entire selected text
+in a {quote} block.
 
 Usage:
    select text, then trigger the snippet via Tools > Snippets... or via keybinding
@@ -45,8 +47,10 @@ https://www.boost.org/doc/libs/1_56_0/libs/regex/doc/html/boost_regex/format/boo
 -->
 <snippet>
 	<content><![CDATA[
-${SELECTION/(?:(&))|(?:(\\))|(?:([\[\]\|\{\}\(\)\-\+_\?~!^\*]))|(?:(\t))|(?:(  ))|(?:(^|[^&])#)/(?1&amp;)(?2&#92;)(?3\\$3)(?4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)(?5&nbsp;&nbsp;)(?6$6\\#)/g}
+{quote}
+${SELECTION/(?:(^))|(?:($))|(?:(\n))|(?:(&))|(?:(\\))|(?:([\[\]\|\{\}\(\)\-\+_\?~!^\*]))|(?:(\t))|(?:(  ))|(?:(^|[^&])#)/(?1{{)(?2}})(?3}}$3{{)(?4&amp;)(?5&#92;)(?6\\$6)(?7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)(?8&nbsp;&nbsp;)(?9$9\\#)/g}
+{quote}
 ]]></content>
-	<!-- <scope>source.jira</scope> -->
-	<description>Jira Escape (escapes Jira interpreted characters)</description>
+	<scope>source.jira</scope>
+	<description>Jira Escape Monocle Quote (escapes Jira interpreted characters)</description>
 </snippet>

@@ -28,6 +28,6 @@ would be changed to:
 $SELECTION
 {code}]]></content>
 	<tabTrigger>code</tabTrigger>
-	<!-- <scope>source.jira</scope> -->
+	<scope>source.jira</scope>
 	<description>Jira Code (adds {code} block)</description>
 </snippet>
