@@ -101,4 +101,9 @@ Example keybindings:
 		"command": "insert_snippet",
 		"args": { "name": "Packages/User/jira_noformat.sublime-snippet" }
 	},
+	{
+		"keys": ["alt+l"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_link.sublime-snippet" }
+	},
 ```

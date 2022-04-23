@@ -1,0 +1,29 @@
+<!--
+==================
+Jira Link function
+==================
+This can be used to add [link|url] formatting.
+
+Usage:
+   select text, then trigger the snippet via Tools > Snippets... or via keybinding
+
+Example keybinding:
+   {
+      "keys": ["alt+l"],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_link.sublime-snippet" }
+   },
+
+Expected results:
+   no selection becomes [link|url]
+   "example" selection becomes [example|url]
+   "https://example.org" selection becomes [link|https://example.org]
+
+-->
+<snippet>
+	<content><![CDATA[
+[${1:${SELECTION/(?:(^$))|(?:(^http.*$))|(?:(^.*))/(?1link)(?2link)(?3$3)/}}|${2:${SELECTION/(?:(^$))|(?:(^http.*$))|(?:(^.*))/(?1:url)(?2:$2)(?3url)/}}]
+]]></content>
+	<scope>source.jira</scope>
+	<description>Jira Link (adds [link|url] formatting)</description>
+</snippet>
