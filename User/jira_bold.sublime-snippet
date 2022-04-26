@@ -12,7 +12,8 @@ Example keybinding:
    {
       "keys": ["alt+b"],
       "command": "insert_snippet",
-      "args": { "name": "Packages/User/jira_bold.sublime-snippet" }
+      "args": { "name": "Packages/User/jira_bold.sublime-snippet" },
+      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
    },
 
 Expected results:

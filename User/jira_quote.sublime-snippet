@@ -11,7 +11,8 @@ Example keybinding:
    {
       "keys": ["alt+q"],
       "command": "insert_snippet",
-      "args": { "name": "Packages/User/jira_quote.sublime-snippet" }
+      "args": { "name": "Packages/User/jira_quote.sublime-snippet" },
+      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
    },
 
 Expected results:

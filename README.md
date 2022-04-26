@@ -34,76 +34,91 @@ Example keybindings:
 	{
 		"keys": ["alt+m"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_escape.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_escape.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["alt+n"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_escape_monospace_quote.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_escape_monospace_quote.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["alt+o"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_panel1.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_panel1.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["alt+p"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_panel2.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_panel2.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["alt+q"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_panel3.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_panel3.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["alt+w"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_code.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_code.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["ctrl+b"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_bold.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_bold.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["ctrl+i"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_italic.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_italic.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["ctrl+u"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_underline.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_underline.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["ctrl+shift+s"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_strikethrough.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_strikethrough.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["alt+h"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_highlight.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_highlight.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["ctrl+m"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_monospaced.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_monospaced.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["ctrl+q"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_quote.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_quote.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["ctrl+l"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_noformat.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_noformat.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 	{
 		"keys": ["alt+l"],
 		"command": "insert_snippet",
-		"args": { "name": "Packages/User/jira_link.sublime-snippet" }
+		"args": { "name": "Packages/User/jira_link.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
 	},
 ```

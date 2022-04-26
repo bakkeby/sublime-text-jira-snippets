@@ -12,7 +12,8 @@ Example keybinding:
    {
       "keys": ["alt+h],
       "command": "insert_snippet",
-      "args": { "name": "Packages/User/jira_highlight.sublime-snippet" }
+      "args": { "name": "Packages/User/jira_highlight.sublime-snippet" },
+      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
    },
 
 Expected results:

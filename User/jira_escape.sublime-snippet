@@ -13,7 +13,8 @@ Example keybinding:
    {
       "keys": ["alt+n"],
       "command": "insert_snippet",
-      "args": { "name": "Packages/User/jira_escape_monospace_quote.sublime-snippet" }
+      "args": { "name": "Packages/User/jira_escape_monospace_quote.sublime-snippet" },
+      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
    },
 
 Expected results:
