@@ -23,6 +23,7 @@ contexts:
     - include: italic
     - include: underline
     - include: ruler
+    - include: mentions
     - include: strikethrough
     - include: subscript
     - include: superscript
@@ -80,6 +81,10 @@ contexts:
     - match: '\{\+\}.*?\{\+\}|(?<!\\)\+[^\+]+?\+'
       scope: markup.underline
       pop: true
+
+  mentions:
+    - match: '(?<!\\)\[\~[^\]]+\]'
+      scope: markup.inserted
 
   strikethrough:
     - match: '\{\-\}.*?\{\-\}|(?<!\\)\-[^\-]+?\-'
