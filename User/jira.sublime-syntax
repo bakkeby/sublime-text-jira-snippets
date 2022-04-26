@@ -17,7 +17,6 @@ contexts:
     # The main context is the initial starting point of our syntax.
     # Include other contexts from here (or specify them directly).
     - include: keywords
-    - include: numbers
     - include: strings
     - include: bold
     - include: italic
@@ -46,10 +45,6 @@ contexts:
     # other.
     - match: '\b(bq\. )\b'
       scope: keyword.control.jira
-
-  numbers:
-    - match: '\b(-)?[0-9.]+\b'
-      scope: constant.numeric.jira
 
   strings:
     # Strings begin and end with quotes, and use backslashes as an escape
