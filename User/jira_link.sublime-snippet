@@ -12,7 +12,7 @@ Example keybinding:
       "keys": ["alt+l"],
       "command": "insert_snippet",
       "args": { "name": "Packages/User/jira_link.sublime-snippet" },
-      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
+      "context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
    },
 
 Expected results:
@@ -25,6 +25,6 @@ Expected results:
 	<content><![CDATA[
 [${1:${SELECTION/(?:(^$))|(?:(^http.*$))|(?:(^.*))/(?1link)(?2link)(?3$3)/}}|${2:${SELECTION/(?:(^$))|(?:(^http.*$))|(?:(^.*))/(?1:url)(?2:$2)(?3url)/}}]
 ]]></content>
-	<scope>source.jira</scope>
+	<scope>text.jira</scope>
 	<description>Jira Link (adds [link|url] formatting)</description>
 </snippet>

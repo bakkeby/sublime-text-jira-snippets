@@ -12,7 +12,7 @@ Example keybinding:
       "keys": ["alt+p],
       "command": "insert_snippet",
       "args": { "name": "Packages/User/jira_panel2.sublime-snippet" },
-      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
+      "context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
    },
 
 Expected results:
@@ -28,6 +28,6 @@ would be changed to:
 $SELECTION$0
 {panel}]]></content>
 	<tabTrigger>panel2</tabTrigger>
-	<scope>source.jira</scope>
+	<scope>text.jira</scope>
 	<description>Jira Panel 2 (adds {panel} block)</description>
 </snippet>

@@ -13,7 +13,7 @@ Example keybinding:
       "keys": ["alt+u"],
       "command": "insert_snippet",
       "args": { "name": "Packages/User/jira_underline.sublime-snippet" },
-      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
+      "context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
    },
 
 Expected results:
@@ -29,6 +29,6 @@ If the selected text is multi-line then {+} will be added at the start and end o
 	<content><![CDATA[
 ${SELECTION/(?:(^$))|(?:(^\s*))|(?:(\s*$))|(?:(\s*\n\s*))|(?:([^\n]*[^\n ]+))/(?1{+})(?2$2)(?3$3)(?4$4)(?5{+}$5{+})/g}$0${SELECTION/(?:(^$))|(?:.+)/(?1{+})(?2)/g}
 ]]></content>
-	<scope>source.jira</scope>
+	<scope>text.jira</scope>
 	<description>Jira Underline (adds {+} formatting)</description>
 </snippet>

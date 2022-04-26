@@ -13,7 +13,7 @@ Example keybinding:
       "keys": ["alt+c],
       "command": "insert_snippet",
       "args": { "name": "Packages/User/jira_code_collapsed.sublime-snippet" },
-      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
+      "context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
    },
 
 Expected results:
@@ -29,6 +29,6 @@ would be changed to:
 $SELECTION$0
 {code}]]></content>
 	<tabTrigger>code</tabTrigger>
-	<scope>source.jira</scope>
+	<scope>text.jira</scope>
 	<description>Jira Code Collapsed (adds collapsed {code} block)</description>
 </snippet>

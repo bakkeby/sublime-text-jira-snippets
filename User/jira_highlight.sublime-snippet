@@ -13,7 +13,7 @@ Example keybinding:
       "keys": ["alt+h],
       "command": "insert_snippet",
       "args": { "name": "Packages/User/jira_highlight.sublime-snippet" },
-      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
+      "context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
    },
 
 Expected results:
@@ -25,6 +25,6 @@ would be changed to:
 <snippet>
 	<content><![CDATA[{color:#900000}$SELECTION$0{color}]]></content>
    <tabTrigger>color</tabTrigger>
-	<scope>source.jira</scope>
+	<scope>text.jira</scope>
 	<description>Jira Highlight (adds {color} block)</description>
 </snippet>

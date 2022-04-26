@@ -14,7 +14,7 @@ Example keybinding:
       "keys": ["alt+n"],
       "command": "insert_snippet",
       "args": { "name": "Packages/User/jira_escape_monospace_quote.sublime-snippet" },
-      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
+      "context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
    },
 
 Expected results:
@@ -48,6 +48,6 @@ https://www.boost.org/doc/libs/1_56_0/libs/regex/doc/html/boost_regex/format/boo
 	<content><![CDATA[
 ${SELECTION/(?:(&))|(?:(\\))|(?:([\[\]\|\{\}\(\)\-\+_\?~!^\*]))|(?:(\t))|(?:(  ))|(?:(^|[^&])#)/(?1&amp;)(?2&#92;)(?3\\$3)(?4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)(?5&nbsp;&nbsp;)(?6$6\\#)/g}
 ]]></content>
-	<scope>source.jira</scope>
+	<scope>text.jira</scope>
 	<description>Jira Escape (escapes Jira interpreted characters)</description>
 </snippet>

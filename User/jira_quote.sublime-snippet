@@ -12,7 +12,7 @@ Example keybinding:
       "keys": ["alt+q"],
       "command": "insert_snippet",
       "args": { "name": "Packages/User/jira_quote.sublime-snippet" },
-      "context": [{ "key": "selector", "operator": "equal", "operand": "source.jira" }]
+      "context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
    },
 
 Expected results:
@@ -28,6 +28,6 @@ would be changed to:
 $SELECTION$0
 {quote}]]></content>
 	<tabTrigger>quote</tabTrigger>
-	<scope>source.jira</scope>
+	<scope>text.jira</scope>
 	<description>Jira Quote (adds {quote} block)</description>
 </snippet>

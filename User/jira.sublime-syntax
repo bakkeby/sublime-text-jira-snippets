@@ -5,7 +5,7 @@
 name: Jira
 file_extensions:
   - jira
-scope: source.jira
+scope: text.jira
 
 contexts:
   # The prototype context is prepended to all contexts but those setting
