@@ -63,17 +63,17 @@ contexts:
       pop: true
 
   bold:
-    - match: '\{\*\}.*?\{\*\}|(?<!\\)\*[^*]+\*'
+    - match: '\{\*\}.*?\{\*\}|(?<![\\\w])\*[^*]+\*(?!\w)'
       scope: markup.bold
       pop: true
 
   italic:
-    - match: '\{_\}.*?\{_\}|(?<!\\)_[^_]+_'
+    - match: '\{_\}.*?\{_\}|(?<![\\\w])_[^_]+_(?!\w)'
       scope: markup.italic
       pop: true
 
   underline:
-    - match: '\{\+\}.*?\{\+\}|(?<!\\)\+[^\+]+?\+'
+    - match: '\{\+\}.*?\{\+\}|(?<![\\\w])\+[^\+]+?\+(?!\w)'
       scope: markup.underline
       pop: true
 
@@ -82,17 +82,17 @@ contexts:
       scope: markup.inserted
 
   strikethrough:
-    - match: '\{\-\}.*?\{\-\}|(?<!\\)\-[^\-]+?\-'
+    - match: '\{\-\}.*?\{\-\}|(?<![\\\w])\-[^\-]+?\-(?!\w)'
       scope: markup.deleted
       pop: true
 
   subscript:
-    - match: '\{\~\}.*?\{\~\}|(?<!\\)\~[^\~]+?\~'
+    - match: '\{\~\}.*?\{\~\}|(?<![\\\w])\~[^\~]+?\~(?!\w)'
       scope: variable.language
       pop: true
 
   superscript:
-    - match: '\{\^\}.*?\{\^\}|(?<!\\)\^[^\^]+?\^'
+    - match: '\{\^\}.*?\{\^\}|(?<![\\\w])\^[^\^]+?\^(?!\w)'
       scope: storage.type
       pop: true
 
