@@ -163,6 +163,36 @@ contexts:
       escape: '{code}'
       escape_captures:
         0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:css[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.css
+      embed_scope: source.css.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(c#|csharp)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.cs
+      embed_scope: source.cs.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(c\+|cpp)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.c++
+      embed_scope: source.c++.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
     - match: '(?<!\\)\{code:c[^\}]*?\}'
       captures:
         1: punctuation.definition.code.begin.md
@@ -180,6 +210,16 @@ contexts:
       pop: 1
       embed: scope:text.xml
       embed_scope: text.xml.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:xslt[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:text.xml.xsl
+      embed_scope: text.xml.xsl.embedded
       escape: '{code}'
       escape_captures:
         0: punctuation.definition.code.end.md
@@ -223,6 +263,136 @@ contexts:
       escape: '{code}'
       escape_captures:
         0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:d[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.d
+      embed_scope: source.d.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:yaml[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.yaml
+      embed_scope: source.yaml.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:scala[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.scala
+      embed_scope: source.scala.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:ruby[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.ruby
+      embed_scope: source.ruby.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:perl[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.perl
+      embed_scope: source.perl.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(pas|pascal)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.pascal
+      embed_scope: source.pascal.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:delphi[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.delphi
+      embed_scope: source.delphi.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(vb|vbnet)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.vb
+      embed_scope: source.vb.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(objc|obj-c)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.objc
+      embed_scope: source.objc.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(bash|sh)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.shell.bash
+      embed_scope: source.shell.bash.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(pp|puppet)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.puppet
+      embed_scope: source.puppet.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:(pp|puppet)[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:source.puppet
+      embed_scope: source.puppet.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
+    - match: '(?<!\\)\{code:gherkin[^\}]*?\}'
+      captures:
+        1: punctuation.definition.code.begin.md
+        2: constant.other.language-name.md
+      pop: 1
+      embed: scope:text.gherkin
+      embed_scope: text.gherkin.embedded
+      escape: '{code}'
+      escape_captures:
+        0: punctuation.definition.code.end.md
 
   panel:
     - match: '^(?<!\\)\{panel[^\}]*?\}'
@@ -240,10 +410,10 @@ contexts:
       pop: true
 
   bullets:
-    - match: '^\s+(\*|-) .+$'
+    - match: '^\s+(\*|-) '
       scope: markup.list.unnumbered
       pop: true
-    - match: '^\s+# .+$'
+    - match: '^\s+# '
       scope: markup.list.numbered
       pop: true
 
