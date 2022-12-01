@@ -19,12 +19,12 @@ Expected results:
 As an example the following string
    hello noformat
 would be changed to:
-   {noformat:collapse}
+   {noformat:collapse|title=}
    hello noformat
    {noformat}
 -->
 <snippet>
-	<content><![CDATA[{noformat${1::collapse}}
+	<content><![CDATA[{noformat${1::collapse}${2:|title=}${3:}}
 $SELECTION$0
 {noformat}]]></content>
 	<tabTrigger>noformat</tabTrigger>
