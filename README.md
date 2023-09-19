@@ -68,6 +68,12 @@ Example keybindings:
 		"context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
 	},
 	{
+		"keys": ["ctrl+enter"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/User/jira_linebreak.sublime-snippet" },
+		"context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
+	},
+	{
 		"keys": ["ctrl+b"],
 		"command": "insert_snippet",
 		"args": { "name": "Packages/User/jira_bold.sublime-snippet" },

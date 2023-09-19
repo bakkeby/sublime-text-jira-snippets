@@ -1,0 +1,33 @@
+<!--
+=======================
+Jira linebreak function
+=======================
+This can be used to line breaks ---- in text.
+
+Usage:
+   Trigger the snippet via Tools > Snippets..., via keybinding or tab complete
+
+Example keybinding:
+   {
+      "keys": ["ctrl+enter],
+      "command": "insert_snippet",
+      "args": { "name": "Packages/User/jira_linebreak.sublime-snippet" },
+      "context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
+   },
+
+Expected results:
+
+   ----
+
+-->
+<snippet>
+   <content><![CDATA[
+${TM_CURRENT_LINE/(^.+$)/?1:\n/}
+----
+
+
+]]></content>
+   <tabTrigger>noformat</tabTrigger>
+   <scope>text.jira</scope>
+   <description>Jira line break (adds ----)</description>
+</snippet>
