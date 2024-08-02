@@ -18,9 +18,9 @@ Example keybinding:
 
 Expected results:
 As an example the following string
-   hello italic
+   hello monospaced
 would be changed to:
-   {{hello italic}}
+   {{hello monospaced}}
 
 If the selected text contains leading or trailing spaces then those will be omitted.
 If the selected text is multi-line then {{ and }} will be added at the start and end of each line.

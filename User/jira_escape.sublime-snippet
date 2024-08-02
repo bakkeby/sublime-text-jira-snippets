@@ -13,7 +13,7 @@ Example keybinding:
    {
       "keys": ["alt+n"],
       "command": "insert_snippet",
-      "args": { "name": "Packages/User/jira_escape_monospace_quote.sublime-snippet" },
+      "args": { "name": "Packages/User/jira_escape.sublime-snippet" },
       "context": [{ "key": "selector", "operator": "equal", "operand": "text.jira" }]
    },
 
@@ -21,9 +21,7 @@ Expected results:
 As an example the following string
    [123] Error: ***Invalid syntax {use of _underscore_ } not allowed***
 would be changed to:
-   {quote}
-   {{\[123\] Error: \*\*\*Invalid syntax \{use of \_underscore\_ \} not allowed\*\*\*}}
-   {quote}
+   \[123\] Error: \*\*\*Invalid syntax \{use of \_underscore\_ \} not allowed\*\*\*
 
 How does it work?
 The snippet uses the substitution syntax that allows for changes to be made via regular
